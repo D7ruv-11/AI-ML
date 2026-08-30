@@ -1,0 +1,35 @@
+# ---------- big downloads (GitHub rejects files over 100 MB) ----------
+jupyter_stuff/Deep_learning/CNN/data/
+*.tar.gz
+*.zip
+*.pt
+*.pkl
+*.h5
+
+# ---------- course notes & question papers (not my own work) ----------
+notes/
+*.pdf
+!Intresting_project_ideas/*.pdf
+
+# ---------- jupyter / anaconda clutter ----------
+.ipynb_checkpoints/
+.virtual_documents/
+anaconda_projects/
+*.db
+desktop.ini
+.DS_Store
+Thumbs.db
+
+# ---------- python ----------
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+
+# ---------- accidental clones of this same repo ----------
+jupyter_stuff/Machine_learning/Supervised_ML/AI-ML/
+jupyter_stuff/Machine_learning/ML_projects/AI-ML/
+
+# ---------- local automation (never uploaded) ----------
+.autopush/
