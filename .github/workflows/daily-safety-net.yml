@@ -18,7 +18,13 @@ name: Daily safety net
 
 on:
   schedule:
-    - cron: '10 18 * * *'      # 18:10 UTC = 23:40 IST
+    # GitHub's scheduled runs are best-effort and can be delayed under load,
+    # sometimes by half an hour or more. A single 23:40 IST run that slipped
+    # past midnight would land on the WRONG DAY and cost the square it was
+    # meant to save. So it fires twice, both late enough that the laptop gets
+    # first go, and both with room to spare before midnight IST.
+    - cron: '30 16 * * *'      # 16:30 UTC = 22:00 IST
+    - cron: '45 17 * * *'      # 17:45 UTC = 23:15 IST
   workflow_dispatch:            # lets you run it by hand from the Actions tab
 
 permissions:
