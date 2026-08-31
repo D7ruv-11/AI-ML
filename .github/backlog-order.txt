@@ -1,0 +1,120 @@
+Assignment-1/ass1-Q1.py
+Assignment-1/ass1-Q2.py
+Assignment-1/ass1-Q3.py
+Assignment-1/ass1-Q4.py
+Assignment-1/ass1-Q5.py
+Assignment-1/ass1-Q6.py
+Assignment-1/ass1-Q7.py
+Assignment-1/ass1-Q8.py
+Assignment-1/ass1-Q9.py
+Assignment-1/ass1-Q10.py
+Assignment-2/ass2-Q1.py
+Assignment-2/ass2-Q2.py
+Assignment-2/ass2-Q3.py
+Assignment-2/ass2-Q4.py
+Assignment-2/ass2-Q5.py
+Assignment-2/ass2-Q6.py
+Assignment-2/ass2-Q7.py
+Assignment-2/ass2-Q8.py
+Assignment-2/ass2-Q9.py
+Assignment-2/ass2-Q10.py
+Assignment-3/Q1.py
+Assignment-3/Q2.py
+Assignment-3/Q3.py
+Assignment-3/Q4.py
+Assignment-3/Q5.py
+Assignment-3/Q6.py
+Assignment-3/Q7.py
+Assignment-3/Q8.py
+Assignment-3/Q9.py
+Assignment-3/Q10.py
+Assignment-4 (pending)/Q1.py
+Assignment-4 (pending)/Q2.py
+Assignment-4 (pending)/Q3.py
+Assignment-4 (pending)/Q4.py
+Assignment-4 (pending)/Q5.py
+Assignment-4 (pending)/Q6.py
+Assignment-4 (pending)/Q7.py
+Assignment-4 (pending)/oops_concepts (1).ipynb
+Assignment-4 (pending)/tiku.py
+Pandas/IRIS.csv
+Pandas/Titanic-Dataset.csv
+Pandas/practice.py
+Datasets/insurance.csv
+Datasets/shop_smart_ecommerce.csv
+Datasets/smartcart_customers.csv
+Datasets/titanic.csv
+Intresting_project_ideas/HACKTHON.pptx
+Intresting_project_ideas/indian_railways_digital_twin_project_plan.pdf
+Intresting_project_ideas/research paper.pdf
+jupyter_stuff/Machine_learning/Supervised_ML/Adaboost.ipynb
+jupyter_stuff/Machine_learning/Supervised_ML/Datacleaning.ipynb
+jupyter_stuff/Machine_learning/Supervised_ML/Decision_Tree_regressor.ipynb
+jupyter_stuff/Machine_learning/Supervised_ML/Decision_trees(classification).ipynb
+jupyter_stuff/Machine_learning/Supervised_ML/Gredient_boosting.ipynb
+jupyter_stuff/Machine_learning/Supervised_ML/IRIS.csv
+jupyter_stuff/Machine_learning/Supervised_ML/IRIS.ipynb
+jupyter_stuff/Machine_learning/Supervised_ML/KNN.ipynb
+jupyter_stuff/Machine_learning/Supervised_ML/Linear_regression.ipynb
+jupyter_stuff/Machine_learning/Supervised_ML/Myfrirstbook.ipynb
+jupyter_stuff/Machine_learning/Supervised_ML/Nova_gen.ipynb
+jupyter_stuff/Machine_learning/Supervised_ML/SVCiris.ipynb
+jupyter_stuff/Machine_learning/Supervised_ML/Titanic-Dataset.csv
+jupyter_stuff/Machine_learning/Supervised_ML/Titanic-Dataset.ipynb
+jupyter_stuff/Machine_learning/Supervised_ML/Untitled.ipynb
+jupyter_stuff/Machine_learning/Supervised_ML/Untitled1.ipynb
+jupyter_stuff/Machine_learning/Supervised_ML/XGBoost.ipynb
+jupyter_stuff/Machine_learning/Supervised_ML/credit_approving_system.ipynb
+jupyter_stuff/Machine_learning/Supervised_ML/data.json
+jupyter_stuff/Machine_learning/Supervised_ML/employee_data.csv
+jupyter_stuff/Machine_learning/Supervised_ML/employee_turnover.csv
+jupyter_stuff/Machine_learning/Supervised_ML/globalAQI.ipynb
+jupyter_stuff/Machine_learning/Supervised_ML/globalAirQuality.csv
+jupyter_stuff/Machine_learning/Supervised_ML/heart.csv
+jupyter_stuff/Machine_learning/Supervised_ML/insurance.csv
+jupyter_stuff/Machine_learning/Supervised_ML/lasso_regression.ipynb
+jupyter_stuff/Machine_learning/Supervised_ML/logistic_regression.ipynb
+jupyter_stuff/Machine_learning/Supervised_ML/naive_bayes.ipynb
+jupyter_stuff/Machine_learning/Supervised_ML/novagen_dataset.csv
+jupyter_stuff/Machine_learning/Supervised_ML/numpy_sol.ipynb
+jupyter_stuff/Machine_learning/Supervised_ML/pandas.ipynb
+jupyter_stuff/Machine_learning/Supervised_ML/raw_data.csv
+jupyter_stuff/Machine_learning/Supervised_ML/rf_classification&bagging.ipynb
+jupyter_stuff/Machine_learning/Supervised_ML/rf_regressor&bagging.ipynb
+jupyter_stuff/Machine_learning/Supervised_ML/shop_smartly.ipynb
+jupyter_stuff/Machine_learning/Supervised_ML/shop_smart_ecommerce.csv
+jupyter_stuff/Machine_learning/Supervised_ML/titanic.csv
+jupyter_stuff/Machine_learning/UnSupervised_ML/AnomalyDetection-1.ipynb
+jupyter_stuff/Machine_learning/UnSupervised_ML/AnomlayDetection-(isolation-forest).ipynb
+jupyter_stuff/Machine_learning/UnSupervised_ML/DBscanoniris.ipynb
+jupyter_stuff/Machine_learning/UnSupervised_ML/DBscan(non_linear).ipynb
+jupyter_stuff/Machine_learning/UnSupervised_ML/Hierarchial_clustering.ipynb
+jupyter_stuff/Machine_learning/UnSupervised_ML/PCA.ipynb
+jupyter_stuff/Machine_learning/UnSupervised_ML/iris_kmeans.ipynb
+jupyter_stuff/Machine_learning/UnSupervised_ML/kmeans.ipynb
+jupyter_stuff/Machine_learning/UnSupervised_ML/thyroid_dataset.csv
+jupyter_stuff/Machine_learning/ML_projects/Employee_turnover - Copy (2)/Assign_Project.ipynb
+jupyter_stuff/Machine_learning/ML_projects/Employee_turnover - Copy (2)/employee_turnover.csv
+jupyter_stuff/Machine_learning/ML_projects/Employee_turnover - Copy/Assign_Project.ipynb
+jupyter_stuff/Machine_learning/ML_projects/Employee_turnover - Copy/employee_turnover.csv
+jupyter_stuff/Machine_learning/ML_projects/Employee_turnover/Assign_Project.ipynb
+jupyter_stuff/Machine_learning/ML_projects/Employee_turnover/employee_turnover.csv
+jupyter_stuff/Machine_learning/ML_projects/HousePricePrediction.csv
+jupyter_stuff/Machine_learning/ML_projects/Mini_project(credit-wise_loan _approval system)/credit_wise.ipynb
+jupyter_stuff/Machine_learning/ML_projects/Mini_project(credit-wise_loan _approval system)/loan_approval.ipynb
+jupyter_stuff/Machine_learning/ML_projects/Mini_project(credit-wise_loan _approval system)/loan_approval_data.csv
+jupyter_stuff/Machine_learning/ML_projects/Untitled1.ipynb
+jupyter_stuff/Machine_learning/ML_projects/estate_predict.ipynb
+jupyter_stuff/Machine_learning/ML_projects/shop_smartly.ipynb
+jupyter_stuff/Machine_learning/ML_projects/shop_smart_ecommerce.csv
+jupyter_stuff/Deep_learning/ANN(regression).ipynb
+jupyter_stuff/Deep_learning/Ann(classification).ipynb
+jupyter_stuff/Deep_learning/CNN/Cnn_cifar_10.ipynb
+jupyter_stuff/Deep_learning/DateFruit_Dataset.csv
+jupyter_stuff/Deep_learning/Neuron.ipynb
+jupyter_stuff/Deep_learning/Perceptron.ipynb
+jupyter_stuff/Deep_learning/powerplant_data.csv
+jupyter_stuff/Machine_learning/Duplicates/random_forest.ipynb
+jupyter_stuff/Machine_learning/Untitled.ipynb
+jupyter_stuff/Machine_learning/abc.csv
+jupyter_stuff/Machine_learning/preprocessed_dataset.csv
