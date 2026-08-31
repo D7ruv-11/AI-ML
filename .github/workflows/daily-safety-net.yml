@@ -24,6 +24,12 @@ on:
 permissions:
   contents: write
 
+# Never let two runs act at once - a manual run and the nightly one
+# could otherwise both release a file.
+concurrency:
+  group: daily-safety-net
+  cancel-in-progress: false
+
 jobs:
   fill-the-gap:
     runs-on: ubuntu-latest
@@ -83,5 +89,30 @@ jobs:
           fi
 
           git commit -m "Add $TARGET"
+
+          # The laptop may have pushed between our check and now. If the push
+          # is rejected, rebase onto whatever arrived and try again. If it was
+          # the laptop committing today's file, the second check below exits
+          # cleanly rather than adding a duplicate.
+          if git push origin HEAD:main; then
+            echo "Done."
+            exit 0
+          fi
+
+          echo "Push rejected - the laptop probably pushed while this was running. Rebasing."
+          git fetch origin main
+          if ! git rebase origin/main; then
+            git rebase --abort || true
+            echo "::warning::could not rebase onto main; leaving today to the laptop"
+            exit 0
+          fi
+
+          NOW="$(date +%F)"
+          BASE="$(git log -2 --date=format-local:%F --format=%cd | tail -1)"
+          if [ "$BASE" = "$NOW" ]; then
+            echo "A commit for $NOW already landed from elsewhere. Nothing more needed."
+            exit 0
+          fi
+
           git push origin HEAD:main
-          echo "Done."
+          echo "Done on retry."
