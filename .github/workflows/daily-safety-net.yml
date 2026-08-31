@@ -1,0 +1,87 @@
+# ---------------------------------------------------------------------------
+#  Daily safety net
+#
+#  The laptop normally makes the day's commit. This runs on GitHub's own
+#  servers late each night and checks whether that actually happened. If a
+#  commit already exists for today it does nothing. If the laptop was off
+#  all day, it releases the next backlog file itself, so the day is not lost.
+#
+#  The files it releases live on the "queue" branch. Because that is not the
+#  default branch, they do not show on the contribution graph until they are
+#  copied to main here.
+#
+#  It holds no state of its own: it decides what to release by comparing
+#  what is on main against the ordered list in .github/backlog-order.txt.
+#  That means it can never drift out of step with the laptop.
+# ---------------------------------------------------------------------------
+name: Daily safety net
+
+on:
+  schedule:
+    - cron: '10 18 * * *'      # 18:10 UTC = 23:40 IST
+  workflow_dispatch:            # lets you run it by hand from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  fill-the-gap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Release the next file, but only if today has no commit
+        env:
+          TZ: Asia/Kolkata
+        run: |
+          set -uo pipefail
+
+          git config user.name  "Dhruv Chonde"
+          git config user.email "official.dhruv.nextgen@gmail.com"
+
+          TODAY="$(date +%F)"
+          LAST="$(git log -1 --date=format-local:%F --format=%cd)"
+          echo "today (IST) = $TODAY   last commit on main = $LAST"
+
+          FORCE=no
+          if [ -f .github/force-once ]; then
+            FORCE=yes
+            echo "force-once flag present - running the release path to prove it works"
+          fi
+
+          if [ "$FORCE" = "no" ] && [ "$LAST" = "$TODAY" ]; then
+            echo "A commit already exists for $TODAY. The laptop did its job - nothing to do."
+            exit 0
+          fi
+
+          git fetch --quiet origin "+refs/heads/queue:refs/remotes/origin/queue" || {
+            echo "::error::the queue branch is missing"; exit 1; }
+
+          TARGET=""
+          while IFS= read -r p || [ -n "$p" ]; do
+            [ -z "$p" ] && continue
+            if git cat-file -e "HEAD:$p" 2>/dev/null; then continue; fi
+            if ! git cat-file -e "origin/queue:$p" 2>/dev/null; then continue; fi
+            TARGET="$p"
+            break
+          done < .github/backlog-order.txt
+
+          if [ -z "$TARGET" ]; then
+            echo "Backlog is empty - nothing left to release."
+            exit 0
+          fi
+
+          echo "Releasing: $TARGET"
+          git checkout origin/queue -- "$TARGET"
+          git add -- "$TARGET"
+
+          if [ "$FORCE" = "yes" ]; then
+            git rm --quiet -f .github/force-once
+          fi
+
+          git commit -m "Add $TARGET"
+          git push origin HEAD:main
+          echo "Done."
